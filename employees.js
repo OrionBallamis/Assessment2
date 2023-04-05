@@ -70,13 +70,8 @@ empOne.getSchedule()
 
 //CODE HERE
 
-// const empTwo = new Employee(...empOne)       could you message me about this one because -
-//                                              I don't remember going over this in class. 
-//                                              I can't find a lab, demo or handout explaining this.
-//                                              The only part that shows ... is in the object screenshot -
-//                                              samples throughout the handouts. 
-
-empTwo.getSchedule()
+const empTwo = {...empOne, name: 'Nick'}       
+console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -103,7 +98,18 @@ empTwo.getSchedule()
 
 //CODE HERE
 
-
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts)
+        this.employees = employees
+    }
+    getEmployees() {
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployees(emp) {
+        this.employees.push(emp)
+    }
+}
 
 
 /*
@@ -118,7 +124,7 @@ empTwo.getSchedule()
 */
 
 //CODE HERE
-
+let manager = new Manager('winston','weekday mornings, weekday afternoons', ['Cece','Schmidt'] )
 
 /*
     Call the `getEmployees` method on the
@@ -126,7 +132,7 @@ empTwo.getSchedule()
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -134,7 +140,7 @@ empTwo.getSchedule()
 */
 
 //CODE HERE 
-
+manager.addEmployees('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -142,3 +148,4 @@ empTwo.getSchedule()
 */
 
 //CODE HERE
+manager.getEmployees()

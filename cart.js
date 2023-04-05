@@ -57,9 +57,13 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let taxTotal = cartTotal * tax;
+    let total = cartTotal + taxTotal - couponValue;
+    return total;
+}
 
-
-
+console.log(calcFinalPrice(summedPrice, 5, 0.06))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -82,7 +86,12 @@ console.log(summedPrice)
 
 /*
     TEXT ANSWER HERE
-
+ Email
+ payment
+ cart
+ cartTotal
+ delivery address
+ billing address
 */
 
 /*
@@ -91,3 +100,14 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+
+const customer = {
+    email: 'fake@fake.com',
+    payment: '1234-1234-1234-1234',
+    cart: [
+        'shoes'
+    ],
+    cartTotal: 20,
+    deliveryAddress: '1234 something dr.',
+    billingAddress: '123 billing ave'
+}
