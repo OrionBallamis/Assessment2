@@ -107,30 +107,35 @@ const foodArr = [
         name: 'pizza',
         price: 7,
         popularity: 8,
+        rating: 4,
         tags: ['family favorite!', 'Kids Choice!']
     },
     {
         name: 'salad',
         price: 5,
         popularity: 6,
+        rating: 3,
         tags: ['healthy!','Quick lunch!']
     },
     {
         name: 'chicken nuggets',
         price: 6,
         popularity: 7,
+        rating: 3.5,
         tags: ['kids Choice!', 'Quick Lunch!']
     },
     {
         name: 'Steak',
         price: 15,
         popularity: 10,
+        rating: 5,
         tags: ['Perfect dateNight!','Good BBQ']
     },
     {
         name: 'porkChop',
         price: 9,
         popularity: 9,
+        rating: 4.5,
         tags: [`family favorite!`,`Good BBQ!`]
     }
 ]
@@ -208,3 +213,4 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+
